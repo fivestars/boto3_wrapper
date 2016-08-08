@@ -10,7 +10,7 @@ import boto3
 import time
 from botocore.exceptions import ClientError
 
-import boto3.helper
+from boto3_wrapper.helpers import Helper
 
 """
 Better boto wrapper that makes coffee
@@ -58,7 +58,7 @@ class SessionWrapper(object):
 
     @property
     def helper(self):
-        return boto3.helper.Helper(self)
+        return Helper(self)
 
 
 def wrap_handle_nextToken(func):
