@@ -67,7 +67,7 @@ def wrap_handle_nextToken(func):
         res = func(*args, **kwargs)
 
         # It's not a dict, we don't know what's happens
-        if not isinstance(res, six.DictType):
+        if not isinstance(res, dict):
             return res
 
         res.pop('ResponseMetadata', None)
