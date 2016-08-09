@@ -80,7 +80,7 @@ def wrap_handle_nextToken(func):
             value = res[keys[0]]
             if next_token:
                 kwargs['NextToken'] = next_token
-                return value + func(*args, **kwargs)
+                return value + wrapper(*args, **kwargs)
             return value
         else:
             if next_token:

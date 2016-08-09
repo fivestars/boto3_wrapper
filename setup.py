@@ -29,6 +29,7 @@ setup(name='boto3_wrapper',
       packages=['boto3_wrapper'],
       install_requires=[
           'boto3==1.4.0',
+          'six==1.10.0',
       ],
       include_package_data=True,
       zip_safe=True)
